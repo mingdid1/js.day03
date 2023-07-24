@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex11</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test(){
+			//alert("test");
+			let id = document.getElementById("txt");
+			let fo = document.getElementById("fo");
+			if (id.value != ""){
+				fo.submit();
+			}else {
+				alert("값을 입력하세요")
+			}
+		}
+	</script>
+	
+	<form id="fo" action="ex10.html">
+		<input type="text" id="txt"><br>
+		<input type="button" onclick="test()" value="전송">
+	</form>
+	
+	
+	- 페이지 이동시 사용 할 수 있는 3가지 방법
+	<input type="button" value="클릭1"
+		onclick="location.href='ex10.html'"><br>
+		
+	<input type="button" value="클릭2" onclick="test2()"><br>
+	<a href="ex10.html">클릭3</a>
+	
+	<script type="text/javascript">
+		function test2(){
+			location.href="ex10.html";
+		}
+	</script>
+</body>
+</html>

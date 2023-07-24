@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test01</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var list=["images/최근상품01", "images/최근상품02", "images/최근상품03",
+				"images/최근상품05", "images/최근상품05", "images/최근상품06"];
+		
+		var x = 0;
+		//window.onload = function auto(){};
+		window.onload = auto = ()=> {
+			if (x == list.length -1){
+				x = 0;
+			}else {
+				x = x+1;
+			}
+			document.getElementById("img01").src =
+					`images/${list[x]}.jpg`;
+			stopval = setTimeout(auto, 1000);
+		}
+		const stop = () => {
+			clearTimeout(stopval);
+		}
+	</script>
+	
+	<img id="img01" src="images/최근상품01.jpg" onmouseover="stop()" onmouseout="auto()">
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex06</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var cnt = 0;	
+		const add = () => {
+			let txt = document.getElementById("txt");
+			let msg = "";
+			msg += `<img src="images/img.jpg" width="100"
+				height="100px" onclick="remove(${cnt})" id="${cnt}">`;
+			cnt++;
+			txt.insertAdjacentHTML("beforeend",msg);
+		}
+		
+		const remove = (idx) =>{
+			//alert(idx);
+			document.getElementById(idx).remove();
+		}
+		
+		const add2 = (t) =>{
+			console.log( t );
+			console.log( document.getElementById("a") );
+			t.remove();
+		}
+	</script>
+	
+	<div id="txt2"></div>
+	<button onclick="add2(this)" id="a">add2()</button>
+<hr>
+	<div id="txt"></div>
+	<button onclick="add()">add()</button>
+	
+</body>
+</html>

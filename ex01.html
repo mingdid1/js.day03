@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex01</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const test = () => {
+			//alert("test 호출");
+			document.write("test 실행 됩니다<br>")
+		}
+		window.onload = ()=> {
+			document.write("처음 실행 됩니다<br>");
+			setTimeout(test, 2000);	// 콜백 함수: 나중에 실행
+			//test();
+			document.write("2초 대기중...<br>");
+		}
+	</script>
+	
+</body>
+</html>

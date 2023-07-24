@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex13</title>
+	<style type="text/css">
+		#remove {display: none;}
+		#remove.a {display: block; background: green;}
+	</style>
+	<script type="text/javascript">
+		const rmBlock = () =>{
+			let remove = document.getElementById("remove");
+			remove.setAttribute("class", "a");
+		}
+		
+		function rmNone(){
+			let remove = document.getElementById("remove");
+			remove.removeAttribute("class");
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="rmBlock" onclick="rmBlock()"><br>
+	<div id ="remove" class="a">
+		<h3>안녕하세요</h3>
+		<input type="button" value="되돌리기" onclick="rmNone()">
+	</div>
+</body>
+</html>

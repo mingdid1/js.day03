@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function myFocus(){
+			document.getElementById("pw").focus();
+			var txt = doucument.getElementById("txt");
+			document.getElementById("copy").value = txt.value;
+		}
+		
+		const myOnchange =() =>{
+			document.getElementById("txt").value = "";
+			document.getElementById("copy").value = "";
+		}
+	</script>
+	
+	<input type="text" id="txt"><br>
+	<input type="text" id="pw" onchange="myOnchange()"><br>
+	<input type="text" id="copy"><br>
+	<input type="button" value="클릭" onclick="myFocus()"><br>
+</body>
+</html>

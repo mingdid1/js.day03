@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex04</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var cnt = 0;
+		const inner = () => {
+			cnt ++;
+			let msg =`내용: ${cnt}<br>`;
+			let txt = document.getElementById("txt");
+			txt.innerHTML = msg;
+			txt.innerAdjacentHTML("afterbegin", msg);
+			//txt.insertAdjacentHTML("beforeend", msg);
+			
+		}
+	</script>
+	<div id="txt">안녕하세요</div>
+	<button onclick="inner()">inner</button>
+</body>
+</html>

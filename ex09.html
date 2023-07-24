@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test() {
+			alert("안녕하세요");
+			let result = confirm("처음 방문??");
+			console.log(result);
+			let msg = document.getElementById("msg");
+			if (result){
+				msg.innerHTML= "환영합니다!!!"
+			}else {
+				msg.innerHTML= "다시 찾아주셔 감사!!!";
+			}
+		}
+	</script>
+	
+	<p id="msg"></p>
+	<input type="button" value="click" onclick="test()">
+</body>
+</html>
